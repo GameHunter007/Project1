@@ -1,0 +1,49 @@
+{% extends "layout.html"%}
+
+{% block title %}
+Register
+{% endblock%}
+
+{% block body%}
+
+<nav >
+     <ul>
+          <li>  <div class="navbar-brand">
+                    <img src="https://images.vexels.com/media/users/3/131605/isolated/preview/f692017c847b87e693ab3c9ed7ca84d6-opened-book-icon-by-vexels.png" 
+                         width="60">
+                    Book's Reviews
+                </div>
+            </li>  
+    </ul>   
+</nav>
+<div class="container">
+    <h1 class="display-4" style="transform:translateX(16px);">Register</h1>
+    <form class="form-group" action="{{url_for('AddUser')}}" method="POST">
+        <div class="reg-form">
+            <label for="Name">Name</label>
+            <input id="Name" name="name" class="form-control " type="text" placeholder="Name">
+        </div> 
+        <div class="reg-form">
+            <label for="Username">Username</label>
+            <input id="Username" name="username" class="form-control" type="text" placeholder="Username">
+        </div>
+        <div class="reg-form">
+            <label for="Pass">Password</label>
+            <input id="Pass" name="password" class="form-control" type="password" placeholder="Password">
+        </div>
+        <div class="reg-form">
+            <label for="Pass1">Re-Enter Password</label>
+            <input id="Pass1" name="re-password" class="form-control" type="password" placeholder="Password">
+        </div>
+        {%if message!=""%}
+        <div class="alert alert-danger reg-form">
+        {{message}}
+        </div>
+        {% endif %}
+            <div style="text-align:center;margin:35px;">
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </form>
+    
+</div>
+{% endblock%}

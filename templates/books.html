@@ -1,0 +1,64 @@
+{% extends "layout.html"%}
+
+{% block title %}
+Book's Reviews-Home
+{% endblock %}
+
+{%block body%}
+
+ <nav >
+     <ul>
+          <li>  <div class="navbar-brand" style="padding: 0px;margin:0px;">
+            <form  action ="{{url_for('login')}}" method="POST">  
+            <a href="{{url_for('login')}}">
+                    <img src="https://images.vexels.com/media/users/3/131605/isolated/preview/f692017c847b87e693ab3c9ed7ca84d6-opened-book-icon-by-vexels.png" 
+                         width="30">
+                    Book's Reviews
+                </a>
+            </form>
+            </div>
+            </li>     
+            <li>
+                <a href="" >Add Review</a>
+            </li>
+            <li style="padding:0px;">
+                <a href="{{url_for('SearchReview')}}" >Search Review</a>
+            </li>
+            
+            
+            <li style="float:right;">
+                <div class="form-row">
+                    <div class="Welcome" >
+                        Welcome,{{Name}}
+                    </div>
+                    <form class="form-inline" action="{{url_for('index')}}" method="POST" >
+                                <button class="btn btn-light">Log out</button>
+                    </form>
+                            
+                </div>
+                
+                    
+            </li>
+            
+            
+     </ul>
+    
+</nav>
+<div class="container" style="margin:50px;">
+    <ul class="list-group">
+        {% for book in books %}
+        <il class="list-group-item list-group-item-light">
+            <a href="{{url_for('Review',book_id=book.id)}}">{{book.title}} ("{{book.author}}")</a>
+        </il>
+        {%endfor%}
+
+    </ol>
+    
+</div>
+
+    
+    
+
+
+
+{% endblock %}

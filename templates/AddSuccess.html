@@ -1,0 +1,26 @@
+{% extends "layout.html"%}
+
+{% block title %}
+Note
+{% endblock%}
+
+{% block body%}
+
+<nav >
+     <ul>
+          <li>  <div class="navbar-brand">
+                    <img src="https://images.vexels.com/media/users/3/131605/isolated/preview/f692017c847b87e693ab3c9ed7ca84d6-opened-book-icon-by-vexels.png" 
+                         width="60">
+                    Book's Reviews
+                </div>
+            </li>  
+    </ul>
+    <div class="Background-Image">
+        <div class="center" style="top:250px; ">
+            <a style="color:black;text-shadow: none;" href="{{url_for('login')}}" >
+                    You have succefully added  a review
+            </a>
+        </div>
+    </div>   
+</nav>
+{% endblock%}

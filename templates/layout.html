@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>{% block title  %}{% endblock%}</title>
+        <style>
+            
+            ul{
+                list-style-type: none;
+                overflow: hidden;
+                margin: 0px;
+                padding: 0px;
+                background-color: #34cdff;
+            }
+            li{
+                float: left;
+                border-right: 1px solid #bbb;
+               
+            }
+            li a{
+                display: block;
+                padding: 19px;
+                color:rgb(255, 242, 242);
+                text-align: center;
+                text-decoration: none;
+                font-size:20px;
+                
+            }
+            li a:hover{
+                background-color: #34cdd7;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            li:first-child{
+                border-right: none;
+                margin:0px;
+                padding:0px;
+            }
+            li:last-child{
+                border-right: none;
+                padding:13px;
+            }
+            button{
+                margin:1px;
+            }
+            .Background-Image{
+                position: relative;
+            }
+            .Background-Image img{
+                height:auto ;
+                width:100%;
+                
+            }
+            .center{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                color:white;
+                width:100px;
+                font-size:30px;
+                text-align: center;
+                text-shadow: 4px 3px black;
+                font-family: Helvetica;
+            }
+            .form-group .reg-form{
+                margin:20px;
+            }
+            .Welcome{
+                padding: 6px;
+                margin-right: 6px;
+                text-align: center;
+                color:black;
+            }
+            label{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        {% block body%}
+        {% endblock%}
+    </body>
+</html>
